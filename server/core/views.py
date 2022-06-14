@@ -38,5 +38,5 @@ class CommentViewSet(viewsets.ModelViewSet):
         thread = self.request.query_params.get('thread')
         if thread is not None:
             queryset = queryset.filter(thread__slug=thread)
-        return queryset
+        return queryset.order_by('-id')
 
