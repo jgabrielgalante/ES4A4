@@ -34,7 +34,7 @@
 
     const comment_li_str = (`
     <li>
-      <h3>${author_email}</h3>
+      <h4>🗣️ ${author_email}</h4>
       <p>${content}</p>
     </li>`)
 
@@ -50,6 +50,7 @@
     const content = formData.get(`content`)
 	createComment(thread,author_email,content)
     .then(() => { appendComment(author_email, content) } )
+    e.target.reset()
   }
 </script>
 {#await getThread()}
@@ -68,17 +69,20 @@
 {:catch error}
 <p style="color: red">{error.message}</p>
 {/await}
+<section class="comment">
 {#await getComments()}
     <p>...waiting</p>
 {:then comments}
-<ul id="comments-list">
-    {#each comments as comment}
-        <li>
-          <h3>{comment.author_email}</h3>
-          <p>{comment.content}</p>
-        </li>
-    {/each}
-</ul>
-{:catch error}
-<p style="color: red">{error.message}</p>
-{/await}
+    <h2>Comentários</h2>
+    <ul id="comments-list">
+        {#each comments as comment}
+            <li>
+              <h4>🗣️ {comment.author_email}</h4>
+              <p>{comment.content}</p>
+            </li>
+        {/each}
+    </ul>
+    {:catch error}
+    <p style="color: red">{error.message}</p>
+    {/await}
+</section>

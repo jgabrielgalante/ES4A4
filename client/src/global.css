@@ -81,3 +81,14 @@ nav a {
     margin-top: 10px;
     font: 16px sans;
 }
+section.comment {
+    margin-top: 20px
+}
+section.comment li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+section.comment h4{
+    color: rgba(0,0,0,.5);
+    font-weight: normal;
+}
