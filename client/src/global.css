@@ -1,0 +1,83 @@
+* { margin: 0; padding: 0 }
+:root{
+    --CG-Blue: #227C9D;
+    --Tiffany-Blue: #17C3B2;
+    --Yellow-Red: #FFCB77;
+    --Off-White: #FEF9EF;
+    --Light-Coral: #FE6D73;
+    --Light-Grey: #F0F0F0;
+}
+
+body {
+	font: 16px sans;
+}
+
+nav {
+	text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+	color: #000;
+}
+
+.wrapper {
+	max-width: 720px;
+	margin: 20px auto;
+}
+
+.search-box {
+	position: relative;
+}
+
+.search-box input#tema {
+	width: calc(100% - 53px);
+	padding: 15px 10px;
+	font-size: 16px;
+	border-radius: 3px;
+	background: var(--Light-Grey);
+	border:0;
+	/*border: 1px solid rgba(0,0,0,.2);*/
+}
+.search-box label#label-tema {
+	margin: 20px 0;
+	display: block;
+}
+
+.search-box button {
+	padding: 16.5px 10px;
+	position: absolute;
+	display: inline-block;
+	border-radius: 3px;
+	border: 0px solid rgba(0,0,0,.2);
+    cursor: pointer;
+	background: var(--Yellow-Red);
+	margin-left: 2px;
+}
+
+#comment-composer {
+    width: 100%;
+    position: relative; }
+#comment-composer input, #comment-composer textarea {
+	width: calc(100% - 20px);
+	padding: 15px 10px;
+	font-size: 16px;
+	border-radius: 3px;
+	background: var(--Light-Grey);
+	border:0;
+    font: 16px sans;
+}
+#comment-composer textarea {
+    margin-top: 10px;
+}
+#comment-composer button {
+	padding: 10px 0;
+	display: block;
+    width: 100%;
+	border-radius: 3px;
+	border: 0px solid rgba(0,0,0,.2);
+    cursor: pointer;
+	background: var(--Yellow-Red);
+    margin-top: 10px;
+    font: 16px sans;
+}
